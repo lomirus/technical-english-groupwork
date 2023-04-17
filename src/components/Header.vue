@@ -8,11 +8,11 @@ import { RouterLink } from 'vue-router';
 <template>
     <header>
         <RouterLink to="/" class="logo">
-
             <img :src="logo">
         </RouterLink>
         <nav>
-            <RouterLink v-for="{ name, url } in links" :to="url">{{ name }}</RouterLink>
+            <RouterLink v-for="{ name, url } in links" :to="url"
+                :class="$route.path.split('/')[1] === url.split('/')[1] ? 'active' : 'inactive'">{{ name }}</RouterLink>
         </nav>
         <div class="search">
             <SearchIcon />
@@ -38,6 +38,7 @@ header {
         height: 100%;
         display: flex;
         align-items: center;
+
         img {
             height: 50px;
         }
@@ -65,7 +66,8 @@ header {
             align-items: center;
         }
 
-        a:hover::after, a.router-link-active::after {
+        a:hover::after,
+        a.active::after {
             content: '';
             display: block;
             position: absolute;
@@ -97,5 +99,4 @@ header {
             color: #fff;
         }
     }
-}
-</style>
+}</style>

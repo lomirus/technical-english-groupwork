@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import img from '../../assets/1.png'
+</script>
+
 <template>
-    TO DO
+    <img :src="img">
 </template>
 <style scoped>
 @import url("../../styles/content.less");
