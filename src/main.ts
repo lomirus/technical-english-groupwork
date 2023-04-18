@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 
 import Home from './pages/Home.vue'
 import About from './pages/About.vue'
@@ -95,9 +95,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(
-        "/technical-english-homework"
-    ),
+    history: createWebHashHistory(),
     routes,
 })
 
