@@ -24,9 +24,8 @@ jobs:
           extended: true
 
       - name: Build
-        run:
-         - npm ci
-         - npm run build
+        run: npm ci
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
