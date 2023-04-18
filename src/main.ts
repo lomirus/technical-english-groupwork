@@ -95,7 +95,9 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(
+        "/technical-english-homework"
+    ),
     routes,
 })
 
